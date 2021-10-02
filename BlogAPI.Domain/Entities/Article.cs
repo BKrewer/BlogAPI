@@ -3,9 +3,9 @@ using System;
 
 namespace BlogAPI.Domain.Entities
 {
-    public class Articles : Entity
+    public class Article : Entity
     {
-        public Articles(string title, string subtitle, string body)
+        public Article(string title, string subtitle, string body)
         {
             Title = title;
             Subtitle = subtitle;
