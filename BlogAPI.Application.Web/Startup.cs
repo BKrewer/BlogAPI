@@ -30,7 +30,7 @@ namespace BlogAPI.Application.Web
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BlogAPI.Application.Web", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BlogAPI", Version = "v1" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace BlogAPI.Application.Web
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BlogAPI.Application.Web v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BlogAPI v1"));
             }
 
             app.UseHttpsRedirection();
