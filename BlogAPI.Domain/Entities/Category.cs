@@ -12,5 +12,11 @@ namespace BlogAPI.Domain.Entities
 
         public string Name { get; private set; }
         public int ParentId { get; private set; }
+
+        public void Update(string name, int parentId)
+        {
+            Name = name;
+            ParentId = parentId;
+        }
     }
 }

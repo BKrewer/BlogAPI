@@ -26,5 +26,22 @@ namespace BlogAPI.Domain.Entities
         public string Password { get; private set; }
         public bool Active { get; private set; }
         public IReadOnlyCollection<Article> Articles { get { return _articles.ToArray(); } }
+
+        public void Update(Name name, DateTime birthDate, Email email)
+        {
+            Name = name;
+            BirthDate = birthDate;
+            Email = email;
+        }
+
+        public void ChangePassword(string password)
+        {
+            Password = password;
+        }
+
+        public void ChangeActive()
+        {
+            Active = !Active;
+        }
     }
 }

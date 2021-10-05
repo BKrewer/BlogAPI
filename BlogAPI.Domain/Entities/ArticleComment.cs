@@ -13,5 +13,10 @@ namespace BlogAPI.Domain.Entities
 
         public string CommentText { get; set; }
         public DateTime CreatedAt { get; private set; }
+
+        public void Update(string commentText)
+        {
+            CommentText = commentText;
+        }
     }
 }
