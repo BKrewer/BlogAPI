@@ -9,12 +9,15 @@ namespace BlogAPI.Domain.Entities
     {
         private readonly IList<ArticleComment> _comments;
 
-        public Article(string title, string subtitle, string body, Category category)
+        public Article(string title, string subtitle, string body, Category category, User user)
         {
             Title = title;
             Subtitle = subtitle;
             Body = body;
+            CategoryId = category.Id;
             Category = category;
+            UserId = user.Id;
+            User = user;
             CreatedAt = DateTime.Now;
             Visible = true;
             _comments = new List<ArticleComment>();
@@ -30,6 +33,9 @@ namespace BlogAPI.Domain.Entities
 
         public int CategoryId { get; private set; }
         public Category Category { get; private set; }
+
+        public int UserId { get; private set; }
+        public User User { get; private set; }
 
         public void Update(string title, string subtitle, string body)
         {
