@@ -18,6 +18,8 @@ namespace BlogAPI.Domain.Entities
             Password = password;
             Active = true;
             _articles = new List<Article>();
+
+            AddNotifications(name, email);
         }
 
         public Name Name { get; private set; }
